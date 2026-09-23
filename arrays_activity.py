@@ -23,7 +23,12 @@ def search_waitlist(waitlist, name):
     print(f"{name} is not in the waitlist")
 
 def traverse_waitlist(waitlist):
-    print(f"Final waitlist: {waitlist}")
+    print("[", end="")
+    for i in range(len(waitlist)):
+        print(f"'{waitlist[i]}'", end="")
+        if i < len(waitlist) - 1:
+            print(", ", end="")
+    print("]")
 
 def create_chart(rows, cols):
     chart = []
@@ -63,11 +68,10 @@ def main():
     print()
     search_waitlist(cinema_waitlist, 'Ben')
 
-    print()
+    print("\nFinal Waitlist: ", end="")
     traverse_waitlist(cinema_waitlist)
 
-    print()
-    print("=== SEATING CHART ===")
+    print("\n=== SEATING CHART ===")
     seating_chart = create_chart(3, 4)
     print("Assigning seats...")
     assign_chart(seating_chart, 0, 1, 'Ana')
@@ -77,6 +81,7 @@ def main():
     print()
     clear_seat(seating_chart, 1, 2)
     traverse_chart(seating_chart)
+    
 main()
 
 # === Reflection Questions ===
