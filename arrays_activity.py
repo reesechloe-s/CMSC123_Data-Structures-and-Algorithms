@@ -92,6 +92,7 @@ main()
 # [2] Why is traversal using loops still important even with built-in functions?
 ## For loop allows me to traverse each item carefully and format it better (in the case of charts, row by row). 
 ## Loops let me inspect, format, or manipulate data exactly how I want it when built-in functions fail due to some pre-formatting they have.
+## Additionally, traversal's for loop is required to visit and read the actual data values stored in memory.
 
 # [3] How would you modify this program if the cinema had 10 rows
 ## I will just change the function call from create_chart(3, 4) to create_chart(10, 4) because I used variables for rows and columns in the function instead of hardcoding the values in the loops
