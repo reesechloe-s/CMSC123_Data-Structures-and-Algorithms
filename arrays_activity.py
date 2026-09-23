@@ -46,7 +46,6 @@ def clear_seat(chart, row, col):
     print(f"Clearing seat ({row}, {col})...")
 
 def traverse_chart(chart):
-    print("Updated seating chart...")
     for i in range(len(chart)):
         print(f"Row {i}: {chart[i]}")
 
@@ -80,8 +79,9 @@ def main():
 
     print()
     clear_seat(seating_chart, 1, 2)
+    print("Updated seating chart:")
     traverse_chart(seating_chart)
-    
+
 main()
 
 # === Reflection Questions ===
